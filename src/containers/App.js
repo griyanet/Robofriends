@@ -12,7 +12,7 @@ class App extends Component {
 			searchField: '',
 		};
 
-		console.log('print 1. Constructor');
+		// console.log('print 1. Constructor');
 	}
 
 	componentDidMount() {
@@ -20,7 +20,7 @@ class App extends Component {
 			.then((response) => response.json())
 			.then((users) => this.setState({ robots: users }));
 
-		console.log('print 2. ComponentDidMount hook');
+		// console.log('print 2. ComponentDidMount hook');
 	}
 
 	onSearchChange = (event) => {
@@ -33,7 +33,7 @@ class App extends Component {
 			return robot.name.toLowerCase().includes(searchField.toLowerCase());
 		});
 
-		console.log('print 3. Render hook');
+		// console.log('print 3. Render hook');
 
 		return !robots.length ? (
 			<h1 className="tc">Loading...</h1>
